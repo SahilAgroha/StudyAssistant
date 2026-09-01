@@ -1,11 +1,11 @@
-import type { QuizQuestion } from "../types/study";
+import type { QuizQuestion } from "../types/quiz";
 
 interface QuizCardProps {
   question: QuizQuestion;
   questionNumber: number;
   totalQuestions: number;
-  selectedAnswer: string | null;
-  onAnswer: (answer: string) => void;
+  selectedAnswer: number | null;
+  onAnswer: (answer: number) => void;
   onNext: () => void;
   onPrevious: () => void;
   isFirstQuestion: boolean;
@@ -27,19 +27,19 @@ function QuizCard({
 
   const isCorrect = selectedAnswer === question.correctAnswer;
 
-  const getOptionStyle = (option: string) => {
+  const getOptionStyle = (optionIndex: number) => {
     // Before answering
     if (!hasAnswered) {
       return "border-slate-700 bg-slate-950 hover:border-indigo-500 hover:bg-slate-900";
     }
 
     // Correct answer
-    if (option === question.correctAnswer) {
+    if (optionIndex === question.correctAnswer) {
       return "border-emerald-500 bg-emerald-500/10";
     }
 
     // User's wrong answer
-    if (option === selectedAnswer) {
+    if (optionIndex === selectedAnswer) {
       return "border-red-500 bg-red-500/10";
     }
 
@@ -78,14 +78,14 @@ function QuizCard({
 
       {/* Options */}
       <div className="mt-6 space-y-3">
-        {question.options.map((option) => (
+        {question.options.map((option, index) => (
           <button
             key={option}
             type="button"
-            onClick={() => onAnswer(option)}
+            onClick={() => onAnswer(index)}
             disabled={hasAnswered}
             className={`w-full rounded-xl border p-4 text-left text-sm font-medium text-slate-200 transition ${getOptionStyle(
-              option
+              index
             )} ${
               !hasAnswered
                 ? "cursor-pointer"
@@ -95,14 +95,21 @@ function QuizCard({
             <div className="flex items-center justify-between gap-4">
               <span>{option}</span>
 
-              {hasAnswered && option === question.correctAnswer && (
-                <span className="text-emerald-400">✓</span>
-              )}
-
+              {/* Correct answer */}
               {hasAnswered &&
-                option === selectedAnswer &&
-                option !== question.correctAnswer && (
-                  <span className="text-red-400">✕</span>
+                index === question.correctAnswer && (
+                  <span className="text-emerald-400">
+                    ✓
+                  </span>
+                )}
+
+              {/* User selected wrong answer */}
+              {hasAnswered &&
+                index === selectedAnswer &&
+                index !== question.correctAnswer && (
+                  <span className="text-red-400">
+                    ✕
+                  </span>
                 )}
             </div>
           </button>
@@ -120,24 +127,31 @@ function QuizCard({
         >
           <p
             className={`font-semibold ${
-              isCorrect ? "text-emerald-400" : "text-red-400"
+              isCorrect
+                ? "text-emerald-400"
+                : "text-red-400"
             }`}
           >
             {isCorrect ? "Correct! 🎉" : "Not quite."}
           </p>
 
+          {/* Show correct answer if user was wrong */}
           {!isCorrect && (
             <p className="mt-2 text-sm text-slate-300">
               <span className="font-medium text-slate-200">
                 Correct answer:
               </span>{" "}
-              {question.correctAnswer}
+              {question.options[question.correctAnswer]}
             </p>
           )}
 
-          <p className="mt-2 text-sm leading-6 text-slate-400">
-            {question.explanation}
-          </p>
+          {/* Explanation */}
+          {"explanation" in question &&
+            question.explanation && (
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                {question.explanation}
+              </p>
+            )}
         </div>
       )}
 
