@@ -1,7 +1,6 @@
-// export const config = {
-//   runtime: "edge",
-// };
-export const maxDuration = 120;
+export const config = {
+  runtime: "edge",
+};
 
 export default async function handler(request: Request) {
   if (request.method !== "POST") {
