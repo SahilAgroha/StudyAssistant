@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Study%20Assistant&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Turn%20Your%20Notes%20Into%20Interactive%20AI%20Flashcards%20%26%20Quizzes&descAlignY=58&descSize=20" alt="banner"/>
+<h1>Study Assistant</h1>
 
 <br/>
 
@@ -23,9 +23,9 @@
 
 <br/>
 
-<a href="YOUR_LIVE_DEMO_URL"><img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_App-6C63FF?style=for-the-badge" /></a>
-<a href="YOUR_SCREEN_RECORDING_URL"><img src="https://img.shields.io/badge/🎥_Watch-Demo_Video-FF4B4B?style=for-the-badge" /></a>
-<a href="YOUR_GITHUB_REPOSITORY_URL"><img src="https://img.shields.io/badge/💻_Source-Repository-181717?style=for-the-badge&logo=github" /></a>
+<a href="https://study-assistant-gold.vercel.app"><img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_App-6C63FF?style=for-the-badge" /></a>
+<a href="https://youtu.be/JdGPubKn76E"><img src="https://img.shields.io/badge/🎥_Watch-Demo_Video-FF4B4B?style=for-the-badge" /></a>
+<a href="https://github.com/SahilAgroha/StudyAssistant"><img src="https://img.shields.io/badge/💻_Source-Repository-181717?style=for-the-badge&logo=github" /></a>
 
 </div>
 
@@ -389,7 +389,7 @@ src/
 
 **Clone the repository**
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/SahilAgroha/StudyAssistant
 ```
 
 </td></tr>
@@ -397,7 +397,7 @@ git clone YOUR_GITHUB_REPOSITORY_URL
 
 **Navigate to the project**
 ```bash
-cd YOUR_PROJECT_FOLDER
+cd StudyAssistant
 ```
 
 </td></tr>
@@ -569,15 +569,15 @@ AI development tools were used during the development of this assignment for:
 
 ## 🌐 Live Demo & Recording
 
-<a href="YOUR_LIVE_DEMO_URL"><img src="https://img.shields.io/badge/🔗_Live_Application-Open_App-6C63FF?style=for-the-badge" /></a>
+<a href="https://study-assistant-gold.vercel.app"><img src="https://img.shields.io/badge/🔗_Live_Application-Open_App-6C63FF?style=for-the-badge" /></a>
 <br/><br/>
-<a href="YOUR_SCREEN_RECORDING_URL"><img src="https://img.shields.io/badge/🎥_Demo_Video-Watch_Now-FF4B4B?style=for-the-badge" /></a>
+<a href="https://youtu.be/JdGPubKn76E"><img src="https://img.shields.io/badge/🎥_Demo_Video-Watch_Now-FF4B4B?style=for-the-badge" /></a>
 <br/><br/>
-<a href="YOUR_GITHUB_REPOSITORY_URL"><img src="https://img.shields.io/badge/💻_Repository-View_Code-181717?style=for-the-badge&logo=github" /></a>
+<a href="https://github.com/SahilAgroha/StudyAssistant"><img src="https://img.shields.io/badge/💻_Repository-View_Code-181717?style=for-the-badge&logo=github" /></a>
 
 <br/><br/>
 
-⏱️ **Time Spent:** Approximately `[ENTER ACTUAL TIME]` was spent developing this assignment.
+⏱️ **Time Spent:** Approximately `7hr+` was spent developing this assignment.
 
 </div>
 
@@ -592,8 +592,8 @@ AI development tools were used during the development of this assignment for:
 ### **Sahil**
 🎓 B.Tech Information Technology · IIIT Bhopal
 
-<a href="YOUR_GITHUB_PROFILE"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
-<a href="YOUR_LINKEDIN_PROFILE"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://github.com/SahilAgroha/"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/sahilagroha/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
 </div>
 
